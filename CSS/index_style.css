@@ -1,0 +1,12 @@
+h5 {
+ 
+    font-style: italic;
+}
+
+table{margin: 5px;padding: 5px;width: 100%;}
+td, th {border: 2px solid;}
+    th, td {padding: 5px;}
+
+
+
+.title_table{color: #54e8bb;} 

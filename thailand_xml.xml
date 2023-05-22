@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE thailand[
+<!ELEMENT thailand (item+)>
+<!ELEMENT item (Transport, Others)>
+<!ELEMENT Transport (#PCDATA)>
+<!ELEMENT Others (Religion, Sports)>
+<!ELEMENT Religion (#PCDATA)>
+<!ELEMENT Sports (#PCDATA)>
+]>
+
+<thailand>
+  <item>
+    <Transport>State Railway </Transport>
+    <Others>
+        <Religion>Buddhism</Religion>
+        <Sports>Muay thai</Sports>
+    </Others>
+  </item>
+  
+  <item>
+    <Transport>Tuk-tuks</Transport>
+    <Others>
+        <Religion>Sikhism</Religion>
+        <Sports>Soccer</Sports>
+    </Others>
+  </item>
+  
+  <item>
+    <Transport>Taxi</Transport>
+    <Others>
+        <Religion>Chinese folk</Religion>
+        <Sports>Badminton</Sports>
+    </Others>
+  </item>
+  
+  <item>
+    <Transport>Motorbike</Transport>
+    <Others>
+        <Religion>Christianity</Religion>
+        <Sports>Snorkel</Sports>
+    </Others>
+  </item>
+  
+  <item>
+    <Transport>BTS Skytrain</Transport>
+    <Others>
+        <Religion>Animism</Religion>
+        <Sports>Sepak Takraw</Sports>
+    </Others>
+  </item>
+  
+  <item>
+    <Transport>Songthaews</Transport>
+    <Others>
+        <Religion>Hinduism</Religion>
+        <Sports>Scuba diving</Sports>
+    </Others>
+  </item>
+  
+  <item>
+    <Transport>Ship</Transport>
+    <Others>
+        <Religion>Islam</Religion>
+        <Sports>Golf</Sports>
+    </Others>
+  </item>
+  
+  <item>
+    <Transport>Plane</Transport>
+    <Others>
+        <Religion>Bahá'í Faith</Religion>
+        <Sports>Volleyball</Sports>
+    </Others>
+  </item>
+ 
+</thailand>

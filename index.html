@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Metatags -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Laura Romero Tortosa">
+    <meta name="description" content="Thailand, Asia, trip, culture, travel">
+    <meta name="keywords" content="Thai, travel, thailand">
+  
+    <!--Responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Links-->
+    <link rel="stylesheet" href="CSS/w3.css">
+    <link rel="stylesheet" href="CSS/common_style.css">
+    <link rel="stylesheet" href="CSS/index_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="images/icon-thailand-color-16.png">
+
+    <title>Thailand</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="MAINpage">T H A I L A N D</h1>
+<!-- ....................................................................-->
+    <!--Main menu for mobile phone-->
+    <nav>
+    <ul class="menu_movil menu_drop ">
+        <li><a href="#menu" class="size_icon"> <i class="fa fa-bars"></i> </a>
+            <ul class="column">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page1.html">Destinations</a></li>
+                <li><a href="page2.html">Gallery</a></li>
+                <li><a href="page3.html">Contact</a></li>
+            </ul>
+        </li>
+    </ul>
+    <!--Main menu for PC-->
+    <ul class="menu_pc menu_drop">
+        <li class="col-3 col-s-3"><a href="index.html">Home</a></li>
+        <li class="col-3 col-s-3"><a href="page1.html">Destinations</a></li>
+        <li class="col-3 col-s-3"><a href="page2.html">Gallery</a></li>
+        <li class="col-3 col-s-3"><a href="page3.html">Contact</a></li>
+    </ul>
+    </nav>
+    </header>
+    
+        <!--Main element with links to web pages with interest information and a little bit info about Thailand-->
+        <div class="container">
+            <main class="col-6 col-s-12 ">
+                <section>
+                    <h2>INTEREST WEBSITES</h2>
+                        <p><a href="https://www.tourismthailand.org/home">Thai tourism</a></p>
+                        <p><a href="https://www.thaiembassy.com/">Thai embassy & </a><a href="https://madrid.thaiembassy.org/">Thai embassy in Spain</a></p>
+                        <p><a href="https://www.gov.uk/foreign-travel-advice/thailand">Foreign travel advice</a></p>
+                        <p><a href="https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Detalle-recomendaciones-de-viaje.aspx?trc=tailandia">Spain travel advice</a></p>
+                </section>
+                <section>
+                    <h2>ABOUT THAILAND</h2>
+                    <h5>Thailand historically known as Siam and officially the Kingdom of Thailand, is a country in Southeast Asia, located at the centre of the Indochinese Peninsula, spanning 513,120 square kilometres (198,120 sq mi), with a population of almost 70 million. The country is bordered to the north by Myanmar and Laos, to the east by Laos and Cambodia, to the south by the Gulf of Thailand and Malaysia, and to the west by the Andaman Sea and the extremity of Myanmar. Thailand also shares maritime borders with Vietnam to the southeast, and Indonesia and India to the southwest. Bangkok is the nation's capital and largest city.</h5>
+                </section> 
+                   <!--Table about transportation, Religion and Sports-->
+                <section>
+                    <h2>A LITTLE BIT MORE ABOUT THAILAND...</h2>
+               
+                    <p><button onclick="loadXMLDoc()">Get Thailand info</button></p>
+
+                    <table id="demo">
+                        <tr>
+                            <th rowspan="2">Transportation</th>
+                            <th colspan="2">Others</th>
+                        </tr>
+                        <tr>
+                            <th>Religion</th>
+                            <th>Sports</th>
+                        </tr>
+                    </table>
+
+                    <script>
+                        function loadXMLDoc() {
+                            var xmlhttp = new XMLHttpRequest();
+                            xmlhttp.onreadystatechange = function () {
+                                if (this.readyState == 4 && this.status == 200) {
+                                    myFunction(this);
+                                }
+                            };
+                            xmlhttp.open("GET", "thailand_xml.xml", true);
+                            xmlhttp.send();
+                        }
+                    
+                        function myFunction(xml) {
+                            var x, i, xmlDoc, table;
+                            xmlDoc = xml.responseXML;
+                            table = "<tr><th rowspan='2'>Transportation</th><th colspan='2'>Others</th></tr><tr><th>Religion</th><th>Sports</th></tr>";
+                            x = xmlDoc.getElementsByTagName("item");
+                            for (i = 0; i < x.length; i++) {
+                                table += "<tr><td>" +
+                                    x[i].getElementsByTagName("Transport")[0].textContent +
+                                    "</td><td>" +
+                                    x[i].getElementsByTagName("Religion")[0].textContent +
+                                    "</td><td>" +
+                                    x[i].getElementsByTagName("Sports")[0].textContent +
+                                    "</td></tr>";
+                            }
+                            document.querySelector("#demo").innerHTML = table;
+                        }
+                    </script>
+                    
+                            </section>
+      
+            </main>
+      
+            <aside class=" col-6 col-s-12">         
+                <section>
+                <h2>ORGANIZE YOUR TRIP</h2>
+                    <p><a href="https://www.agoda.com/es-es/country/thailand.html?site_id=1891458&tag=699e2cd8-cc6a-9a40-dd90-4a40c1c5b8e7&device=c&network=g&adid=492756903543&rand=16368570476798133626&expid=&adpos=&aud=kwd-14711055968&gclid=EAIaIQobChMI0ZaKtrOI_gIV4uDmCh3A3Q7rEAAYASAAEgLcsvD_BwE&pslc=1">Hotel</a></p>
+                    <p><a href="https://www.skyscanner.es/">Flights &</a><a href="https://www.airasia.com/en/gb"> Flights around Asia</a></p>
+                    <p><a href="https://www.thailandtrains.com/buy-train-tickets-from-bangkok-to-chiang-mai/">Train</a></p>
+                    <p><a href="https://www.iatiseguros.com/">Travel insurance</a></p>
+                    <p><a href="https://www.lonelyplanet.com/thailand">Lonely Planet</a></p>
+                </section>  
+                <section>          
+                <h2>EXPERIENCES</h2>
+                    <p><a href="https://kantaelephantsanctuary.com/">Nature & Outdoor</a></p>
+                    <p><a href=" https://www.oxygentourskohtao.com/">Koh Tao snorkel tours</a></p>
+                    <p><a href="https://guide.michelin.com/es/es/bangkok-region/bangkok/restaurante/jay-fai">Michelin restaurant</a></p>
+                    <p><a href="https://www.tripadvisor.com/Attractions-g293915-Activities-c26-t143-Thailand.html"> Shopping malls </a></p>
+                </section>      
+            </aside>
+        </div>
+    <footer class=" col-12 col-s-12">
+                   
+            <p>&copy; 2023 Laura Romero</p>
+       
+                <!--bookmark with the id attribute-->
+            <a href="#MAINpage"><img src="IMAGES/backtotop.png" alt="back to top"></a>   
+      
+    </footer>
+
+</body>
+</html>
