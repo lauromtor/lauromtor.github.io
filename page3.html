@@ -206,7 +206,7 @@
         //question 1: check the currency of Thailand
         if(q11){
             mark=2; 
-        } else if (q1===""){
+        } else if (q11===""){
             mark=0;
         } else {
             mark=-1;
@@ -230,7 +230,7 @@
         //question 4: check the main religion in Thailand
         if(q42){
             mark+=2;
-        } else if (!q41 && !q42 && !q43 && !q44 && !q45){
+        } else if (q42===""){
             mark+=0;
         } else {
             mark-=1;
@@ -238,7 +238,7 @@
         //question 5: check the name of the most famous Thai beach
         if(q53){
             mark+=2;
-        } else if (!q51 && !q52 && !q53 && !q54 && !q55){
+        } else if (q55){
             mark+=0;
         } else {
             mark-=1;
